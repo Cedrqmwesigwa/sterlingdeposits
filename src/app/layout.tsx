@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Sterling Deposits',
-  description: 'Secure your contracting projects with Sterling Deposits. Reliable services and transparent deposit handling.',
+  title: 'Sterling Contractors - Quality Construction & Hardware',
+  description: 'Sterling Contractors: Your trusted partner for construction services and hardware supplies in Kampala, Uganda. Specializing in residential projects, renovations, and material consultation. Secure your project with us.',
 };
 
 export default function RootLayout({

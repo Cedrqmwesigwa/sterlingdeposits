@@ -19,12 +19,13 @@ export interface Testimonial {
   avatarHint?: string;
 }
 
-export interface Product {
-  id: string;
-  name: string;
-  shortDescription: string;
-  price: string; // e.g., "$99.99" or "Contact for Price"
-  imageSrc: string;
-  imageHint: string; 
-  category?: string;
-}
+// Removed Product type as it was for luxury goods
+// export interface Product {
+//   id: string;
+//   name: string;
+//   shortDescription: string;
+//   price: string; 
+//   imageSrc: string;
+//   imageHint: string; 
+//   category?: string;
+// }

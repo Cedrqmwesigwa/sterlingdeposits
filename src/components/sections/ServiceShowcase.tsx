@@ -1,32 +1,56 @@
 import { ServiceCard } from '@/components/ui/ServiceCard';
 import type { Service } from '@/types';
 import ScrollAnimate from '@/components/ScrollAnimate';
-import { Briefcase, Wrench, DraftingCompass } from 'lucide-react';
+import { Briefcase, Wrench, DraftingCompass, HardHat, Truck, Hammer } from 'lucide-react';
 
 const services: Service[] = [
   {
-    id: 'new-construction',
-    title: 'New Construction Projects',
-    description: 'From groundbreaking to completion, we manage all aspects of your new construction with precision and expertise.',
+    id: 'residential-construction',
+    title: 'Residential Construction',
+    description: 'Building your dream home from foundation to finish with quality materials and expert craftsmanship.',
     imageSrc: 'https://placehold.co/400x300.png',
-    imageHint: 'construction site',
+    imageHint: 'house construction site',
+    icon: HardHat,
+  },
+  {
+    id: 'commercial-projects',
+    title: 'Commercial Projects',
+    description: 'Expert solutions for commercial building construction, ensuring functionality and durability for your business.',
+    imageSrc: 'https://placehold.co/400x300.png',
+    imageHint: 'commercial building modern',
     icon: Briefcase,
   },
   {
-    id: 'renovation',
-    title: 'Renovation & Remodeling',
-    description: 'Transform your existing spaces with our high-quality renovation and remodeling services, tailored to your vision.',
+    id: 'renovation-remodeling',
+    title: 'Renovations & Remodeling',
+    description: 'Transforming existing spaces with innovative designs and high-quality renovations, for homes and businesses.',
     imageSrc: 'https://placehold.co/400x300.png',
-    imageHint: 'modern kitchen',
+    imageHint: 'kitchen remodel tools',
     icon: Wrench,
   },
   {
-    id: 'consultation',
-    title: 'Consultation & Planning',
-    description: 'Expert consultation and meticulous planning to ensure your project is set up for success from the very first step.',
+    id: 'hardware-supply',
+    title: 'Hardware & Material Supply',
+    description: 'Providing a wide range of quality construction materials and hardware for all your project needs.',
     imageSrc: 'https://placehold.co/400x300.png',
-    imageHint: 'blueprints planning',
+    imageHint: 'hardware tools store',
+    icon: Hammer,
+  },
+  {
+    id: 'project-consultation',
+    title: 'Project Consultation',
+    description: 'Expert advice and planning services to ensure your construction project is successful from start to finish.',
+    imageSrc: 'https://placehold.co/400x300.png',
+    imageHint: 'blueprint architect plans',
     icon: DraftingCompass,
+  },
+  {
+    id: 'logistics-delivery',
+    title: 'Material Logistics & Delivery',
+    description: 'Reliable and timely delivery of construction materials directly to your site in Kampala.',
+    imageSrc: 'https://placehold.co/400x300.png',
+    imageHint: 'construction truck delivery',
+    icon: Truck,
   },
 ];
 
@@ -39,12 +63,12 @@ export default function ServiceShowcase() {
             Our Premier Services
           </h2>
           <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12 lg:mb-16 text-lg">
-            We offer a comprehensive range of contracting services designed to meet your project needs with excellence and reliability.
+            We offer a comprehensive range of contracting and hardware supply services designed to meet your project needs with excellence and reliability.
           </p>
         </ScrollAnimate>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <ScrollAnimate key={service.id} delay={`delay-${index * 150}`}>
+            <ScrollAnimate key={service.id} delay={`delay-${index * 100}`}>
               <ServiceCard service={service} />
             </ScrollAnimate>
           ))}

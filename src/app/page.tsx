@@ -1,12 +1,31 @@
 import MainLayout from '@/components/layout/MainLayout';
-import HeroSection from '@/components/sections/HeroSection';
-import ShopSection from '@/components/sections/ShopSection';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+
+import ServiceShowcase from '@/components/sections/ServiceShowcase';
+import Testimonials from '@/components/sections/Testimonials';
+import ContractorInfo from '@/components/sections/ContractorInfo';
+import PaymentSecurity from '@/components/sections/PaymentSecurity';
+import ContactSection from '@/components/sections/ContactSection';
+
 
 export default function Home() {
   return (
     <MainLayout>
-      <HeroSection />
-      <ShopSection />
+      <section className="flex flex-col items-center justify-center min-h-[calc(100vh-5rem)] text-center py-16 md:py-20 px-4">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">Sterling Contractors</h1>
+        <p className="text-xl md:text-2xl mb-8 max-w-2xl text-muted-foreground">
+          Your trusted partner for quality hardware supplies and reliable contracting services. Building your vision in Kampala, Uganda.
+        </p>
+        <Link href="#contact">
+          <Button size="lg" className="px-8 py-3 text-lg">Get a Free Quote</Button>
+        </Link>
+      </section>
+      <ServiceShowcase />
+      <ContractorInfo />
+      <Testimonials />
+      <PaymentSecurity />
+      <ContactSection />
     </MainLayout>
   );
 }
