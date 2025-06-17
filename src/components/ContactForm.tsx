@@ -1,140 +1,170 @@
+
 "use client";
-import { useState, type FormEvent } from 'react';
+
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as z from 'zod';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { Checkbox } from "@/components/ui/checkbox";
-import { sendContactEmail, type ContactFormInput } from '@/ai/flows/send-contact-email-flow';
+import { useState } from 'react';
+import { Loader2, CheckCircle, AlertTriangle } from 'lucide-react';
+import {
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+  } from "@/components/ui/form"
+
+// Schema for form validation
+const formSchema = z.object({
+  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  email: z.string().email({ message: "Please enter a valid email address." }),
+  subject: z.string().min(4, { message: "Subject must be at least 4 characters." }),
+  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
+});
+
+type FormData = z.infer<typeof formSchema>;
 
 export function ContactForm() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [message, setMessage] = useState('');
-  const [agreedToTerms, setAgreedToTerms] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const { toast } = useToast();
 
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    if (!agreedToTerms) {
-      toast({
-        title: "Terms Agreement Required",
-        description: "Please agree to the terms and conditions.",
-        variant: "destructive",
-      });
-      return;
-    }
-    setSubmitting(true);
-    
-    const formData: ContactFormInput = { name, email, phone, message };
+  const form = useForm<FormData>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  });
 
+  const onSubmit = async (values: FormData) => {
+    setStatus('loading');
     try {
-      const result = await sendContactEmail(formData);
-      
-      if (result.success) {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (response.ok) {
+        setStatus('success');
         toast({
           title: "Message Sent!",
-          description: result.message,
+          description: "Thank you for contacting us. We'll get back to you shortly.",
         });
-        // Reset form fields
-        setName('');
-        setEmail('');
-        setPhone('');
-        setMessage('');
-        setAgreedToTerms(false);
+        form.reset();
       } else {
+        setStatus('error');
         toast({
-          title: "Error Sending Message",
-          description: result.message || "An unexpected error occurred.",
+          title: "Error",
+          description: "Failed to send message. Please try again later.",
           variant: "destructive",
         });
       }
     } catch (error) {
-      console.error("Error submitting contact form:", error);
+      setStatus('error');
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again later.",
+        description: "An unexpected error occurred. Please try again.",
         variant: "destructive",
       });
-    } finally {
-      setSubmitting(false);
     }
   };
 
+  if (status === 'success') {
+    return (
+        <div className="text-center p-8 bg-card rounded-lg shadow-xl flex flex-col items-center">
+            <CheckCircle className="h-16 w-16 text-green-500 mb-4"/>
+            <h3 className="text-2xl font-bold mb-2">Message Sent Successfully!</h3>
+            <p className="text-muted-foreground">We've received your inquiry and will be in touch soon.</p>
+            <Button onClick={() => setStatus('idle')} className="mt-6">Send Another Message</Button>
+        </div>
+    )
+  }
+
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 p-8 bg-card rounded-lg shadow-xl">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <Label htmlFor="name" className="text-foreground/90">Full Name</Label>
-          <Input
-            id="name"
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-            className="mt-1 bg-background border-border placeholder:text-muted-foreground focus:ring-primary"
-            placeholder="John Doe"
-          />
-        </div>
-        <div>
-          <Label htmlFor="email" className="text-foreground/90">Email Address</Label>
-          <Input
-            id="email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="mt-1 bg-background border-border placeholder:text-muted-foreground focus:ring-primary"
-            placeholder="you@example.com"
-          />
-        </div>
-      </div>
-      <div>
-        <Label htmlFor="phone" className="text-foreground/90">Phone Number (Optional)</Label>
-        <Input
-          id="phone"
-          type="tel"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          className="mt-1 bg-background border-border placeholder:text-muted-foreground focus:ring-primary"
-          placeholder="(555) 123-4567"
-        />
-      </div>
-      <div>
-        <Label htmlFor="message" className="text-foreground/90">Message / Project Details</Label>
-        <Textarea
-          id="message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          required
-          rows={5}
-          minLength={10}
-          className="mt-1 bg-background border-border placeholder:text-muted-foreground focus:ring-primary"
-          placeholder="Tell us about your project, service interest, or inquiry (min. 10 characters)..."
-        />
-      </div>
-      <div className="flex items-center space-x-2">
-        <Checkbox 
-            id="terms" 
-            checked={agreedToTerms} 
-            onCheckedChange={(checked) => setAgreedToTerms(checked as boolean)}
-            aria-labelledby="terms-label"
-        />
-        <Label htmlFor="terms" id="terms-label" className="text-sm text-muted-foreground cursor-pointer">
-          I agree to the <a href="#" className="underline text-primary hover:text-primary/80">terms and conditions</a>.
-        </Label>
-      </div>
-      <Button 
-        type="submit" 
-        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-lg py-3" 
-        disabled={submitting || !agreedToTerms}
-        aria-live="polite"
-      >
-        {submitting ? 'Sending...' : 'Send Message & Inquire Deposit'}
-      </Button>
-    </form>
+    <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 p-8 bg-card rounded-lg shadow-xl">
+        <FormField
+            control={form.control}
+            name="name"
+            render={({ field }) => (
+                <FormItem>
+                <FormLabel>Full Name</FormLabel>
+                <FormControl>
+                    <Input placeholder="John Doe" {...field} />
+                </FormControl>
+                <FormMessage />
+                </FormItem>
+            )}
+            />
+        <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+                <FormItem>
+                <FormLabel>Email Address</FormLabel>
+                <FormControl>
+                    <Input placeholder="you@example.com" {...field} />
+                </FormControl>
+                <FormMessage />
+                </FormItem>
+            )}
+            />
+        <FormField
+            control={form.control}
+            name="subject"
+            render={({ field }) => (
+                <FormItem>
+                <FormLabel>Subject</FormLabel>
+                <FormControl>
+                    <Input placeholder="e.g., Residential Construction Inquiry" {...field} />
+                </FormControl>
+                <FormMessage />
+                </FormItem>
+            )}
+            />
+        <FormField
+            control={form.control}
+            name="message"
+            render={({ field }) => (
+                <FormItem>
+                <FormLabel>Message / Project Details</FormLabel>
+                <FormControl>
+                    <Textarea
+                    placeholder="Tell us about your project..."
+                    rows={5}
+                    {...field}
+                    />
+                </FormControl>
+                <FormMessage />
+                </FormItem>
+            )}
+            />
+        <Button 
+            type="submit" 
+            className="w-full text-lg" 
+            disabled={status === 'loading'}
+        >
+            {status === 'loading' && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+            {status === 'loading' ? 'Sending...' : 'Send Message'}
+        </Button>
+        {status === 'error' && (
+            <div className="text-red-500 flex items-center gap-2">
+                <AlertTriangle className="h-4 w-4"/>
+                <p>Something went wrong. Please check your details and try again.</p>
+            </div>
+        )}
+        </form>
+    </Form>
   );
 }

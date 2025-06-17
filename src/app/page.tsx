@@ -55,20 +55,20 @@ export default function Home() {
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { id: 1, hint: 'modern building' },
-              { id: 2, hint: 'interior design' },
-              { id: 3, hint: 'construction site' }
+              { id: 1, src: "https://images.unsplash.com/photo-1494526585095-c41746248156?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyZXNpZGVudGlhbCUyMHxlbnwwfHx8fDE3NTAxODU5ODd8MA&ixlib=rb-4.1.0&q=80&w=1080", hint: 'modern building', alt: 'Modern residential building' },
+              { id: 2, src: "https://placehold.co/600x400.png", hint: 'interior design', alt: 'Interior design project' },
+              { id: 3, src: "https://placehold.co/600x400.png", hint: 'construction site', alt: 'Construction site in progress' }
             ].map((item) => (
               <Card key={item.id}>
                 <div className="relative h-60 w-full">
                   <Image
-                    src={`https://placehold.co/600x400.png`}
-                    alt={`Project ${item.id} placeholder`}
+                    src={item.src}
+                    alt={item.alt}
                     layout="fill"
                     objectFit="cover"
                     className="rounded-t-lg"
                     data-ai-hint={item.hint}
-                    priority
+                    priority={item.id === 1} // Only prioritize the first image or specific important ones
                   />
                 </div>
                 <CardHeader>
