@@ -1,9 +1,17 @@
 
-import React from 'react';
+"use client"; // Mark as a client component
+
+import React, { useState, useEffect } from 'react';
 import MainLayout from '@/components/layout/MainLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const PrivacyPolicyPage = () => {
+  const [lastUpdated, setLastUpdated] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLastUpdated(new Date().toLocaleDateString());
+  }, []);
+
   return (
     <MainLayout>
       <div className="container mx-auto px-4 md:px-6 py-12 lg:py-16">
@@ -55,7 +63,11 @@ const PrivacyPolicyPage = () => {
             <p className="mt-8 text-sm">
               This policy is a placeholder and should be reviewed and updated by a legal professional to ensure compliance with all applicable laws and regulations.
             </p>
-            <p className="text-sm">Last updated: {new Date().toLocaleDateString()}</p>
+            {lastUpdated !== null ? (
+              <p className="text-sm">Last updated: {lastUpdated}</p>
+            ) : (
+              <p className="text-sm">Loading date...</p>
+            )}
           </CardContent>
         </Card>
       </div>
