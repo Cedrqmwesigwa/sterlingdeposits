@@ -14,8 +14,8 @@ const products: Product[] = [
     icon: Layers,
   },
   {
-    id: 'iron-sheets-gauge28',
-    name: 'Iron Sheets (Gauge 28)',
+    id: 'iron-sheets-gauge30',
+    name: 'Iron Sheets (Gauge 30g)',
     price: '42,000',
     unit: 'per piece',
     imageSrc: 'https://placehold.co/400x300.png',
