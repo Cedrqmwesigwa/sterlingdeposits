@@ -19,13 +19,12 @@ export interface Testimonial {
   avatarHint?: string;
 }
 
-// Removed Product type as it was for luxury goods
-// export interface Product {
-//   id: string;
-//   name: string;
-//   shortDescription: string;
-//   price: string; 
-//   imageSrc: string;
-//   imageHint: string; 
-//   category?: string;
-// }
+export interface Product {
+  id: string;
+  name: string;
+  price: string; 
+  unit?: string; // e.g., "per bag", "per sheet"
+  imageSrc: string;
+  imageHint: string; 
+  icon?: LucideIcon;
+}
