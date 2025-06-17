@@ -1,3 +1,4 @@
+
 import { ShieldCheck, Lock, CreditCard } from 'lucide-react';
 import ScrollAnimate from '@/components/ScrollAnimate';
 
@@ -7,19 +8,16 @@ export default function PaymentSecurity() {
       icon: ShieldCheck,
       title: "Verified Transactions",
       description: "All transactions are verified and monitored for your protection.",
-      hint: "security shield"
     },
     {
       icon: Lock,
       title: "SSL Encryption",
       description: "Your data is protected with industry-standard SSL encryption.",
-      hint: "secure lock"
     },
     {
       icon: CreditCard,
       title: "Secure Gateways",
       description: "We partner with leading payment gateways for secure processing.",
-      hint: "payment card"
     }
   ];
 
@@ -39,7 +37,7 @@ export default function PaymentSecurity() {
             <ScrollAnimate key={feature.title} delay={`delay-${index * 150}`}>
               <div className="p-6 rounded-lg ">
                 <div className="flex justify-center mb-4">
-                  <feature.icon className="h-12 w-12 text-primary" aria-hidden="true" data-ai-hint={feature.hint}/>
+                  <feature.icon className="h-12 w-12 text-primary" aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-2 font-headline">{feature.title}</h3>
                 <p className="text-muted-foreground text-sm">{feature.description}</p>

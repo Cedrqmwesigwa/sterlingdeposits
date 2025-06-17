@@ -1,7 +1,8 @@
+
 import { ProductCard } from '@/components/ui/ProductCard';
 import type { Product } from '@/types';
 import ScrollAnimate from '@/components/ScrollAnimate';
-import { ShoppingCart, Layers, LayoutGrid } from 'lucide-react'; // Using LayoutGrid for iron sheets
+import { Layers, LayoutGrid } from 'lucide-react';
 
 const products: Product[] = [
   {
@@ -10,7 +11,7 @@ const products: Product[] = [
     price: '42,000',
     unit: 'per bag',
     imageSrc: 'https://placehold.co/400x300.png',
-    imageHint: 'cement bag construction',
+    imageHint: 'cement bag',
     icon: Layers,
   },
   {
@@ -19,7 +20,7 @@ const products: Product[] = [
     price: '42,000',
     unit: 'per piece',
     imageSrc: 'https://placehold.co/400x300.png',
-    imageHint: 'roofing iron sheets',
+    imageHint: 'roofing sheets',
     icon: LayoutGrid,
   },
   // Add more products here

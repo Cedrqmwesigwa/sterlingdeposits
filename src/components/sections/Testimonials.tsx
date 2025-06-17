@@ -1,3 +1,4 @@
+
 import { TestimonialCard } from '@/components/ui/TestimonialCard';
 import type { Testimonial } from '@/types';
 import ScrollAnimate from '@/components/ScrollAnimate';
@@ -9,7 +10,7 @@ const testimonials: Testimonial[] = [
     name: 'Mr. Mukasa',
     projectType: 'Residential Renovation - Kampala',
     avatarSrc: 'https://placehold.co/100x100.png',
-    avatarHint: 'african man portrait'
+    avatarHint: 'man portrait'
   },
   {
     id: 'client-achiro',
@@ -17,7 +18,7 @@ const testimonials: Testimonial[] = [
     name: 'Dr. Aciro',
     projectType: 'Commercial New Build - Health Clinic',
     avatarSrc: 'https://placehold.co/100x100.png',
-    avatarHint: 'african woman professional'
+    avatarHint: 'woman professional'
   },
   {
     id: 'client-okello',
@@ -25,7 +26,7 @@ const testimonials: Testimonial[] = [
     name: 'Okello Properties Ltd.',
     projectType: 'Hardware Supply & Consultation',
     avatarSrc: 'https://placehold.co/100x100.png',
-    avatarHint: 'construction manager happy'
+    avatarHint: 'construction manager'
   },
 ];
 

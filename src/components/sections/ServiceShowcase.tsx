@@ -1,3 +1,4 @@
+
 import { ServiceCard } from '@/components/ui/ServiceCard';
 import type { Service } from '@/types';
 import ScrollAnimate from '@/components/ScrollAnimate';
@@ -9,7 +10,7 @@ const services: Service[] = [
     title: 'Residential Construction',
     description: 'Building your dream home from foundation to finish with quality materials and expert craftsmanship.',
     imageSrc: 'https://placehold.co/400x300.png',
-    imageHint: 'house construction site',
+    imageHint: 'house construction',
     icon: HardHat,
   },
   {
@@ -17,7 +18,7 @@ const services: Service[] = [
     title: 'Commercial Projects',
     description: 'Expert solutions for commercial building construction, ensuring functionality and durability for your business.',
     imageSrc: 'https://placehold.co/400x300.png',
-    imageHint: 'commercial building modern',
+    imageHint: 'commercial building',
     icon: Briefcase,
   },
   {
@@ -25,7 +26,7 @@ const services: Service[] = [
     title: 'Renovations & Remodeling',
     description: 'Transforming existing spaces with innovative designs and high-quality renovations, for homes and businesses.',
     imageSrc: 'https://placehold.co/400x300.png',
-    imageHint: 'kitchen remodel tools',
+    imageHint: 'kitchen remodel',
     icon: Wrench,
   },
   {
@@ -33,7 +34,7 @@ const services: Service[] = [
     title: 'Hardware & Material Supply',
     description: 'Providing a wide range of quality construction materials and hardware for all your project needs.',
     imageSrc: 'https://placehold.co/400x300.png',
-    imageHint: 'hardware tools store',
+    imageHint: 'hardware store',
     icon: Hammer,
   },
   {
@@ -41,7 +42,7 @@ const services: Service[] = [
     title: 'Project Consultation',
     description: 'Expert advice and planning services to ensure your construction project is successful from start to finish.',
     imageSrc: 'https://placehold.co/400x300.png',
-    imageHint: 'blueprint architect plans',
+    imageHint: 'blueprint plans',
     icon: DraftingCompass,
   },
   {
@@ -49,7 +50,7 @@ const services: Service[] = [
     title: 'Material Logistics & Delivery',
     description: 'Reliable and timely delivery of construction materials directly to your site in Kampala.',
     imageSrc: 'https://placehold.co/400x300.png',
-    imageHint: 'construction truck delivery',
+    imageHint: 'truck delivery',
     icon: Truck,
   },
 ];
