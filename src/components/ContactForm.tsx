@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Checkbox } from "@/components/ui/checkbox";
+import { sendContactEmail, type ContactFormInput } from '@/ai/flows/send-contact-email-flow';
 
 export function ContactForm() {
   const [name, setName] = useState('');
@@ -28,23 +29,39 @@ export function ContactForm() {
     }
     setSubmitting(true);
     
-    // Simulate API call for form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    console.log("Form submitted:", { name, email, phone, message }); // Replace with actual submission logic
-    
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. We'll get back to you soon.",
-    });
-    
-    // Reset form fields
-    setName('');
-    setEmail('');
-    setPhone('');
-    setMessage('');
-    setAgreedToTerms(false);
-    setSubmitting(false);
+    const formData: ContactFormInput = { name, email, phone, message };
+
+    try {
+      const result = await sendContactEmail(formData);
+      
+      if (result.success) {
+        toast({
+          title: "Message Sent!",
+          description: result.message,
+        });
+        // Reset form fields
+        setName('');
+        setEmail('');
+        setPhone('');
+        setMessage('');
+        setAgreedToTerms(false);
+      } else {
+        toast({
+          title: "Error Sending Message",
+          description: result.message || "An unexpected error occurred.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting contact form:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -94,8 +111,9 @@ export function ContactForm() {
           onChange={(e) => setMessage(e.target.value)}
           required
           rows={5}
+          minLength={10}
           className="mt-1 bg-background border-border placeholder:text-muted-foreground focus:ring-primary"
-          placeholder="Tell us about your project, service interest, or inquiry..."
+          placeholder="Tell us about your project, service interest, or inquiry (min. 10 characters)..."
         />
       </div>
       <div className="flex items-center space-x-2">
