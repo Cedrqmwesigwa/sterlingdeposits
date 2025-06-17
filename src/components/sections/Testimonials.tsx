@@ -9,7 +9,7 @@ const testimonials: Testimonial[] = [
     quote: "Sterling Contractors transformed our ancestral home with such care and precision. The team was professional, and the hardware they supplied was top-notch. The deposit process was clear and secure.",
     name: 'Mr. Mukasa',
     projectType: 'Residential Renovation - Kampala',
-    avatarSrc: 'https://placehold.co/100x100.png',
+    avatarSrc: 'https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxibGFjayUyMG1hbnxlbnwwfHx8fDE3NTAxODY1MTV8MA&ixlib=rb-4.1.0&q=80&w=1080',
     avatarHint: 'man portrait'
   },
   {
