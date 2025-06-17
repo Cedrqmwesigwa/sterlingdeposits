@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [
     quote: "Finding reliable hardware suppliers in Kampala was a challenge until we found Sterling. Their range is great, and their consultation helped us choose the right materials for our apartment complex. ",
     name: 'Okello Properties Ltd.',
     projectType: 'Hardware Supply & Consultation',
-    avatarSrc: 'https://placehold.co/100x100.png',
+    avatarSrc: 'https://images.unsplash.com/photo-1529111290557-82f6d5c6cf85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxibGFjayUyMG1hbnxlbnwwfHx8fDE3NTAxODY1MTV8MA&ixlib=rb-4.1.0&q=80&w=1080',
     avatarHint: 'construction manager'
   },
 ];
