@@ -13,6 +13,7 @@ const ServicesPage = () => {
           <p className="text-lg text-muted-foreground mb-4">
             Sterling Contractors specializes in bringing your dream home to life. From initial design consultation and planning to complete construction, we handle every aspect of building new residential properties. Our team ensures quality craftsmanship, adherence to timelines, and transparent communication throughout the process. We work with a wide range of materials from our hardware supply to provide durable and aesthetically pleasing homes.
           </p>
+ <img src="/placeholder-residential.jpg" alt="Residential Construction" className="w-full h-auto rounded-md mb-4" />
           <p className="text-lg text-muted-foreground">
             Our residential construction services include:
           </p>
@@ -33,6 +34,7 @@ const ServicesPage = () => {
           <p className="text-lg text-muted-foreground mb-4">
             Transform your existing property with Sterling Contractors' renovation and remodeling expertise. Whether you're looking to update a single room, extend your living space, or completely remodel your home, we provide comprehensive services. We work closely with you to understand your vision and deliver functional and beautiful results that enhance your property's value and appeal. Our access to quality hardware materials ensures the best results.
           </p>
+ <img src="/placeholder-renovation.jpg" alt="Home Renovation" className="w-full h-auto rounded-md mb-4" />
           <p className="text-lg text-muted-foreground">
             Our renovation and remodeling services include:
           </p>
@@ -52,6 +54,7 @@ const ServicesPage = () => {
           <p className="text-lg text-muted-foreground mb-4">
             Beyond our contracting services, Sterling Contractors also provides consultation on hardware materials and can supply high-quality products for various construction and renovation needs. Leveraging our experience, we can advise on the best materials for your project, ensuring durability and cost-effectiveness.
           </p>
+ <img src="/placeholder-hardware.jpg" alt="Hardware Supply" className="w-full h-auto rounded-md mb-4" />
           <p className="text-lg text-muted-foreground">
             We can assist with:
           </p>
