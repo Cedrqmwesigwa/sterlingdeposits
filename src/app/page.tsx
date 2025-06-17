@@ -3,14 +3,15 @@ import MainLayout from '@/components/layout/MainLayout';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 
-import ServiceShowcase from '@/components/sections/ServiceShowcase';
-import ShopSection from '@/components/sections/ShopSection';
-import Testimonials from '@/components/sections/Testimonials';
-import ContractorInfo from '@/components/sections/ContractorInfo';
-import PaymentSecurity from '@/components/sections/PaymentSecurity';
-import ContactSection from '@/components/sections/ContactSection';
-import GoogleLoginButton from '@/components/GoogleLoginButton'; // Import the new component
+const ServiceShowcase = dynamic(() => import('@/components/sections/ServiceShowcase'));
+const ShopSection = dynamic(() => import('@/components/sections/ShopSection'));
+const Testimonials = dynamic(() => import('@/components/sections/Testimonials'));
+const ContractorInfo = dynamic(() => import('@/components/sections/ContractorInfo'));
+const PaymentSecurity = dynamic(() => import('@/components/sections/PaymentSecurity'));
+const ContactSection = dynamic(() => import('@/components/sections/ContactSection'));
+const GoogleLoginButton = dynamic(() => import('@/components/GoogleLoginButton'));
 
 export default function Home() {
   return (
@@ -28,17 +29,35 @@ export default function Home() {
       <section className="py-12 md:py-16 px-4 md:px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Our Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Placeholder Image 1 */}
-          <div className="relative w-full aspect-video rounded-lg overflow-hidden">
-            <Image src="/placeholder.svg" alt="Project Showcase 1" layout="fill" objectFit="cover" />
+          <div className="relative w-full aspect-[3/2] rounded-lg overflow-hidden">
+            <Image 
+              src="https://placehold.co/600x400.png" 
+              alt="Modern residential house construction project" 
+              layout="fill" 
+              objectFit="cover" 
+              data-ai-hint="house exterior"
+              priority
+            />
           </div>
-          {/* Placeholder Image 2 */}
-          <div className="relative w-full aspect-video rounded-lg overflow-hidden">
-            <Image src="/placeholder.svg" alt="Project Showcase 2" layout="fill" objectFit="cover" />
+          <div className="relative w-full aspect-[3/2] rounded-lg overflow-hidden">
+            <Image 
+              src="https://placehold.co/600x400.png" 
+              alt="Commercial building site under construction" 
+              layout="fill" 
+              objectFit="cover" 
+              data-ai-hint="building site"
+              priority
+            />
           </div>
-          {/* Placeholder Image 3 */}
-          <div className="relative w-full aspect-video rounded-lg overflow-hidden">
-            <Image src="/placeholder.svg" alt="Project Showcase 3" layout="fill" objectFit="cover" />
+          <div className="relative w-full aspect-[3/2] rounded-lg overflow-hidden">
+            <Image 
+              src="https://placehold.co/600x400.png" 
+              alt="Renovated kitchen interior" 
+              layout="fill" 
+              objectFit="cover" 
+              data-ai-hint="interior renovation"
+              priority
+            />
           </div>
         </div>
       </section>
