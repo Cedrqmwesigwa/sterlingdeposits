@@ -1,8 +1,14 @@
+
 import { ContactForm } from '@/components/ContactForm';
 import ScrollAnimate from '@/components/ScrollAnimate';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 export default function ContactSection() {
+  const latitude = 0.310014;
+  const longitude = 32.579385;
+  const zoomLevel = 15;
+  const mapEmbedUrl = `https://maps.google.com/maps?q=${latitude},${longitude}&z=${zoomLevel}&output=embed`;
+
   return (
     <section id="contact" className="py-16 lg:py-24 bg-card">
       <div className="container mx-auto px-4 md:px-6">
@@ -37,7 +43,7 @@ export default function ContactSection() {
                     <Mail className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-medium text-foreground">Email</h4>
-                      <a href="mailto:info@sterlingcontractors.ug" className="text-muted-foreground hover:text-primary transition-colors">info@sterlingcontractors.ug</a>
+                      <a href="mailto:mctyptys@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">mctyptys@gmail.com</a>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -45,6 +51,14 @@ export default function ContactSection() {
                     <div>
                       <h4 className="font-medium text-foreground">Office Address</h4>
                       <p className="text-muted-foreground">Plot 42, Industrial Area, Kampala, Uganda</p>
+                      <a 
+                        href={`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-sm text-primary hover:underline"
+                      >
+                        View on Google Maps
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -58,6 +72,21 @@ export default function ContactSection() {
             </ScrollAnimate>
           </div>
         </div>
+
+        <ScrollAnimate delay="delay-450">
+          <div className="mt-16 rounded-lg overflow-hidden shadow-xl border border-border/30">
+            <iframe
+              src={mapEmbedUrl}
+              width="100%"
+              height="450"
+              style={{ border:0 }}
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Office Location Map"
+            ></iframe>
+          </div>
+        </ScrollAnimate>
       </div>
     </section>
   );

@@ -7,8 +7,8 @@ import Image from 'next/image';
 const navItems = [
   { href: '/', label: 'Home' },
   { href: '/services', label: 'Services' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#contact', 'label': 'Contact' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/about', label: 'About Us' },
 ];
 
 export default function Header() {
@@ -16,7 +16,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2" aria-label="Sterling Contractors Home">
-          <Image src="/sterling logo.jpg" alt="Sterling Contractors Logo" width={32} height={32} className="rounded-full" />
+          <Image src="/sterling logo.jpg" alt="Sterling Contractors Logo" width={32} height={32} className="rounded-full object-cover" />
           <span className="text-2xl font-bold font-headline text-foreground">Sterling Contractors</span>
         </Link>
         
@@ -31,7 +31,7 @@ export default function Header() {
             </Link>
           ))}
           <Button asChild size="lg">
-            <Link href="#contact">Get Quote</Link>
+            <Link href="/#contact">Get Quote</Link>
           </Button>
         </nav>
 
@@ -45,7 +45,7 @@ export default function Header() {
             <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background border-border">
               <div className="flex justify-start p-4">
                 <Link href="/" className="flex items-center gap-2" aria-label="Sterling Contractors Home">
-                  <Image src="/sterling logo.jpg" alt="Sterling Contractors Logo" width={32} height={32} className="rounded-full" />
+                  <Image src="/sterling logo.jpg" alt="Sterling Contractors Logo" width={32} height={32} className="rounded-full object-cover" />
                   <span className="text-xl font-bold font-headline text-foreground">Sterling Contractors</span>
                 </Link>
               </div>
@@ -60,7 +60,7 @@ export default function Header() {
                   </Link>
                 ))}
                 <Button asChild className="mt-4" size="lg">
-                  <Link href="#contact">Get Quote</Link>
+                  <Link href="/#contact">Get Quote</Link>
                 </Button>
               </nav>
             </SheetContent>

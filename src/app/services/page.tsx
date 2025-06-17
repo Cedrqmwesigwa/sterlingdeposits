@@ -2,94 +2,113 @@
 import React from 'react';
 import MainLayout from '@/components/layout/MainLayout';
 import Image from 'next/image';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { CheckCircle } from 'lucide-react';
+
+const services = [
+  {
+    title: 'Residential Construction',
+    description: 'From dream homes to custom builds, we lay the foundation for your future. Our team handles everything from design to the final touches, ensuring quality at every step.',
+    image: 'https://placehold.co/600x400/EEE/31343C?text=New+Home',
+    features: [
+      'New Home Builds',
+      'Custom Designs',
+      'Foundation & Framing',
+      'Full Project Management',
+    ],
+  },
+  {
+    title: 'Commercial Renovations',
+    description: 'Modernize your business space to be more functional and appealing. We specialize in renovations that enhance your brand and improve customer experience.',
+    image: 'https://placehold.co/600x400/EEE/31343C?text=Office+Space',
+    features: [
+      'Office & Retail Remodeling',
+      'Space Optimization',
+      'Exterior Facelifts',
+      'Modern & Functional Designs',
+    ],
+  },
+  {
+    title: 'Hardware Supply & Consultation',
+    description: 'Gain access to top-quality hardware and expert advice. We source and supply the best materials to ensure your project’s success and longevity.',
+    image: 'https://placehold.co/600x400/EEE/31343C?text=Hardware',
+    features: [
+      'Quality Material Sourcing',
+      'Cost-Effective Solutions',
+      'Expert Material Advice',
+      'Wide Range of Products',
+    ],
+  },
+];
+
+const SectionTitle = ({ title, description }: { title: string; description: string }) => (
+    <div className="text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{title}</h2>
+      <p className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">{description}</p>
+    </div>
+  );
 
 const ServicesPage = () => {
   return (
     <MainLayout>
-      <div className="container mx-auto px-4 md:px-6 py-8">
-        <h1 className="text-3xl font-bold mb-6 text-center text-primary">Our Services</h1>
+      {/* Hero Section */}
+      <section className="text-center py-20 lg:py-24 bg-muted/20">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4">Our Expertise</h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-muted-foreground">
+            Delivering high-quality construction and hardware solutions tailored for you.
+          </p>
+        </div>
+      </section>
 
-        <section className="mb-12 p-6 bg-card rounded-lg shadow-lg">
-          <h2 className="text-2xl font-semibold mb-4 text-foreground">Residential Construction</h2>
-          <p className="text-lg text-muted-foreground mb-4">
-            Sterling Contractors specializes in bringing your dream home to life. From initial design consultation and planning to complete construction, we handle every aspect of building new residential properties. Our team ensures quality craftsmanship, adherence to timelines, and transparent communication throughout the process. We work with a wide range of materials from our hardware supply to provide durable and aesthetically pleasing homes.
-          </p>
-          <div className="relative w-full aspect-[4/3] rounded-md overflow-hidden mb-4">
-            <Image 
-              src="https://placehold.co/800x600.png" 
-              alt="Residential Construction Project" 
-              layout="fill" 
-              objectFit="cover"
-              data-ai-hint="modern house"
-            />
+      {/* Services Grid */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-12">
+            {services.map((service, index) => (
+              <Card key={service.title} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className={`grid md:grid-cols-2 items-center`}>
+                  <div className={`relative h-64 md:h-full ${index % 2 === 1 ? 'md:order-last' : ''}`}>
+                    <Image
+                      src={service.image}
+                      alt={`${service.title} service image`}
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
+                  <div className="p-8">
+                    <CardTitle className="text-2xl mb-4">{service.title}</CardTitle>
+                    <p className="text-muted-foreground mb-6">{service.description}</p>
+                    <ul className="space-y-2">
+                        {service.features.map((feature) =>(
+                            <li key={feature} className="flex items-center gap-2">
+                                <CheckCircle className="h-5 w-5 text-primary"/>
+                                <span>{feature}</span>
+                            </li>
+                        ))}
+                    </ul>
+                  </div>
+                </div>
+              </Card>
+            ))}
           </div>
-          <p className="text-lg text-muted-foreground">
-            Our residential construction services include:
-          </p>
-          <ul className="list-disc list-inside ml-4 text-muted-foreground space-y-1 mt-2">
-            <li>New home construction (single-family homes, duplexes, etc.)</li>
-            <li>Custom home building</li>
-            <li>Foundation work</li>
-            <li>Framing and structural work</li>
-            <li>Roofing and exterior finishing</li>
-            <li>Interior finishing (drywall, painting, flooring)</li>
-            <li>Plumbing and electrical installations</li>
-            <li>Project management from start to finish</li>
-          </ul>
-        </section>
+        </div>
+      </section>
 
-        <section className="mb-12 p-6 bg-card rounded-lg shadow-lg">
-          <h2 className="text-2xl font-semibold mb-4 text-foreground">Renovations and Remodeling</h2>
-          <p className="text-lg text-muted-foreground mb-4">
-            Transform your existing property with Sterling Contractors' renovation and remodeling expertise. Whether you're looking to update a single room, extend your living space, or completely remodel your home, we provide comprehensive services. We work closely with you to understand your vision and deliver functional and beautiful results that enhance your property's value and appeal. Our access to quality hardware materials ensures the best results.
-          </p>
-          <div className="relative w-full aspect-[4/3] rounded-md overflow-hidden mb-4">
-            <Image 
-              src="https://placehold.co/800x600.png" 
-              alt="Home Renovation in Progress" 
-              layout="fill" 
-              objectFit="cover"
-              data-ai-hint="kitchen renovation"
-            />
-          </div>
-          <p className="text-lg text-muted-foreground">
-            Our renovation and remodeling services include:
-          </p>
-          <ul className="list-disc list-inside ml-4 text-muted-foreground space-y-1 mt-2">
-            <li>Kitchen and bathroom remodeling</li>
-            <li>Home additions and extensions</li>
-            <li>Basement finishing</li>
-            <li>Exterior renovations (siding, windows, doors)</li>
-            <li>Structural modifications</li>
-            <li>Layout changes and space optimization</li>
-            <li>Restorations and historical renovations</li>
-          </ul>
-        </section>
-
-        <section className="p-6 bg-card rounded-lg shadow-lg">
-          <h2 className="text-2xl font-semibold mb-4 text-foreground">Hardware Supply and Consultation</h2>
-          <p className="text-lg text-muted-foreground mb-4">
-            Beyond our contracting services, Sterling Contractors also provides consultation on hardware materials and can supply high-quality products for various construction and renovation needs. Leveraging our experience, we can advise on the best materials for your project, ensuring durability and cost-effectiveness.
-          </p>
-          <div className="relative w-full aspect-[4/3] rounded-md overflow-hidden mb-4">
-            <Image 
-              src="https://placehold.co/800x600.png" 
-              alt="Hardware Store Aisle" 
-              layout="fill" 
-              objectFit="cover"
-              data-ai-hint="tools hardware"
-            />
-          </div>
-          <p className="text-lg text-muted-foreground">
-            We can assist with:
-          </p>
-          <ul className="list-disc list-inside ml-4 text-muted-foreground space-y-1 mt-2">
-            <li>Material selection and sourcing</li>
-            <li>Providing a range of construction hardware</li>
-            <li>Expert advice on material usage and applications</li>
-          </ul>
-        </section>
-      </div>
+      {/* CTA Section */}
+      <section className="py-20 bg-muted/40">
+        <div className="container mx-auto text-center px-4">
+            <h2 className="text-3xl font-bold mb-4">Have a project in mind?</h2>
+            <p className="text-muted-foreground mb-8">
+                Let's discuss how Sterling Contractors can bring your vision to life.
+            </p>
+            <Button asChild size="lg">
+                <Link href="/#contact">Get a Free Quote</Link>
+            </Button>
+        </div>
+      </section>
     </MainLayout>
   );
 };
