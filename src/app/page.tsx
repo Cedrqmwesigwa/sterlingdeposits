@@ -12,7 +12,7 @@ import ContactSection from '@/components/sections/ContactSection';
 export default function Home() {
   return (
     <MainLayout>
-      <section className="flex flex-col items-center justify-center min-h-[calc(100vh-5rem)] text-center py-16 md:py-20 px-4">
+      <section className="flex flex-col items-center justify-center min-h-[calc(80vh-5rem)] text-center py-16 md:py-20 px-4 md:px-6">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Sterling Contractors</h1>
         <p className="text-xl md:text-2xl mb-8 max-w-2xl text-muted-foreground">
           Your trusted partner for quality hardware supplies and reliable contracting services. Building your vision in Kampala, Uganda.

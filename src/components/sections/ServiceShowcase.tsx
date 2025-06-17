@@ -57,7 +57,7 @@ const services: Service[] = [
 export default function ServiceShowcase() {
   return (
     <section id="services" className="py-16 lg:py-24 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 md:px-6">
         <ScrollAnimate>
           <h2 className="text-3xl font-bold font-headline text-center text-foreground sm:text-4xl mb-4">
             Our Premier Services

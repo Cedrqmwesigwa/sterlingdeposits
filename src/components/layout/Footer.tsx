@@ -10,7 +10,7 @@ const ContractorLogoMini = () => (
 export default function Footer() {
   return (
     <footer className="border-t border-border/40 bg-background/95 py-12">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="container mx-auto px-4 md:px-6 text-center">
         <div className="flex justify-center items-center gap-2 mb-4">
           <ContractorLogoMini />
           <span className="text-xl font-bold font-headline text-foreground">Sterling Contractors</span>

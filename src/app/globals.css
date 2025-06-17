@@ -43,7 +43,7 @@
   }
 
   .dark {
-    --background: 0 0% 4%; /* Very Dark Gray / Black */
+    --background: 0 0% 6%; /* Slightly lightened Very Dark Gray / Black */
     --foreground: 0 0% 98%; /* White */
     
     --card: 0 0% 8%; /* Slightly off-black */

@@ -6,7 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 export default function ContractorInfo() {
   return (
     <section id="about" className="py-16 lg:py-24 bg-card">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <ScrollAnimate>
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
