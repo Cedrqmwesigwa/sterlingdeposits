@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
     quote: "Building our new clinic was a huge undertaking, but Sterling Contractors made it manageable. Their project management was excellent, and they delivered on time. We highly recommend their services.",
     name: 'Dr. Aciro',
     projectType: 'Commercial New Build - Health Clinic',
-    avatarSrc: 'https://placehold.co/100x100.png',
+    avatarSrc: 'https://images.unsplash.com/photo-1507152832244-10d45c7eda57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxibGFjayUyMHdvbWFufGVufDB8fHx8MTc1MDE4NjUzOHww&ixlib=rb-4.1.0&q=80&w=1080',
     avatarHint: 'woman professional'
   },
   {
