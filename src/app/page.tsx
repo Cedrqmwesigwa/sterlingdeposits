@@ -2,72 +2,100 @@
 import MainLayout from '@/components/layout/MainLayout';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 
+// Lazy-loaded sections
 const ServiceShowcase = dynamic(() => import('@/components/sections/ServiceShowcase'));
 const ShopSection = dynamic(() => import('@/components/sections/ShopSection'));
-const Testimonials = dynamic(() => import('@/components/sections/Testimonials'));
 const ContractorInfo = dynamic(() => import('@/components/sections/ContractorInfo'));
+const Testimonials = dynamic(() => import('@/components/sections/Testimonials'));
 const PaymentSecurity = dynamic(() => import('@/components/sections/PaymentSecurity'));
 const ContactSection = dynamic(() => import('@/components/sections/ContactSection'));
 const GoogleLoginButton = dynamic(() => import('@/components/GoogleLoginButton'));
 
+// Helper component for section titles
+const SectionTitle = ({ title, description }: { title: string; description: string }) => (
+  <div className="text-center mb-12">
+    <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{title}</h2>
+    <p className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">{description}</p>
+  </div>
+);
+
 export default function Home() {
   return (
     <MainLayout>
-      <section className="flex flex-col items-center justify-center min-h-[calc(50vh-5rem)] text-center py-12 md:py-16 px-4 md:px-6">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Sterling Contractors</h1>
-        <p className="text-xl md:text-2xl mb-8 max-w-2xl text-muted-foreground">
-          Your trusted partner for quality hardware supplies and reliable contracting services. Building your vision in Kampala, Uganda.
-        </p>
-        <Link href="#contact">
-          <Button size="lg" className="px-8 py-3 text-lg">Get a Free Quote</Button>
-        </Link>
-      </section>
-
-      <section className="py-12 md:py-16 px-4 md:px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Our Projects</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="relative w-full aspect-[3/2] rounded-lg overflow-hidden">
-            <Image 
-              src="https://placehold.co/600x400.png" 
-              alt="Modern residential house construction project" 
-              layout="fill" 
-              objectFit="cover" 
-              data-ai-hint="house exterior"
-              priority
-            />
-          </div>
-          <div className="relative w-full aspect-[3/2] rounded-lg overflow-hidden">
-            <Image 
-              src="https://placehold.co/600x400.png" 
-              alt="Commercial building site under construction" 
-              layout="fill" 
-              objectFit="cover" 
-              data-ai-hint="building site"
-              priority
-            />
-          </div>
-          <div className="relative w-full aspect-[3/2] rounded-lg overflow-hidden">
-            <Image 
-              src="https://placehold.co/600x400.png" 
-              alt="Renovated kitchen interior" 
-              layout="fill" 
-              objectFit="cover" 
-              data-ai-hint="interior renovation"
-              priority
-            />
+      {/* Hero Section */}
+      <section className="text-center py-16 lg:py-24 bg-background">
+        <div className="container mx-auto px-4 md:px-6">
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 text-primary">
+            Sterling Contractors
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-muted-foreground">
+            Your trusted partner for quality hardware supplies and reliable contracting services in Kampala, Uganda.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <Button asChild size="lg" className="px-8 py-3 text-lg">
+              <Link href="#contact">Get a Free Quote</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="px-8 py-3 text-lg border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground">
+              <Link href="#services">Our Services</Link>
+            </Button>
           </div>
         </div>
       </section>
+
+      {/* Projects Showcase Section */}
+      <section id="projects" className="py-16">
+        <div className="container mx-auto px-4 md:px-6">
+          <SectionTitle
+            title="Our Recent Work"
+            description="We take pride in our work. Here are a few of our recently completed projects."
+          />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { id: 1, hint: 'modern building' },
+              { id: 2, hint: 'interior design' },
+              { id: 3, hint: 'construction site' }
+            ].map((item) => (
+              <Card key={item.id}>
+                <div className="relative h-60 w-full">
+                  <Image
+                    src={`https://placehold.co/600x400.png`}
+                    alt={`Project ${item.id} placeholder`}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-t-lg"
+                    data-ai-hint={item.hint}
+                    priority
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle>Project Title {item.id}</CardTitle>
+                  <CardDescription>Kampala, Uganda</CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Dynamically imported sections */}
       <ServiceShowcase />
       <ShopSection />
       <ContractorInfo />
       <Testimonials />
       <PaymentSecurity />
       <ContactSection />
-      <GoogleLoginButton />
+      
+      {/* Google Login */}
+      <div className="text-center py-8 border-t border-border/40">
+        <p className="text-sm text-muted-foreground mb-3">Admin Login</p>
+        <div className="flex justify-center">
+          <GoogleLoginButton />
+        </div>
+      </div>
     </MainLayout>
   );
 }
