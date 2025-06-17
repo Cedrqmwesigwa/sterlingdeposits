@@ -11,7 +11,8 @@ const services = [
   {
     title: 'Residential Construction',
     description: 'From dream homes to custom builds, we lay the foundation for your future. Our team handles everything from design to the final touches, ensuring quality at every step.',
-    image: 'https://placehold.co/600x400/EEE/31343C?text=New+Home',
+    image: 'https://placehold.co/600x400.png',
+    hint: 'new home',
     features: [
       'New Home Builds',
       'Custom Designs',
@@ -22,7 +23,8 @@ const services = [
   {
     title: 'Commercial Renovations',
     description: 'Modernize your business space to be more functional and appealing. We specialize in renovations that enhance your brand and improve customer experience.',
-    image: 'https://placehold.co/600x400/EEE/31343C?text=Office+Space',
+    image: 'https://placehold.co/600x400.png',
+    hint: 'office space',
     features: [
       'Office & Retail Remodeling',
       'Space Optimization',
@@ -33,7 +35,8 @@ const services = [
   {
     title: 'Hardware Supply & Consultation',
     description: 'Gain access to top-quality hardware and expert advice. We source and supply the best materials to ensure your project’s success and longevity.',
-    image: 'https://placehold.co/600x400/EEE/31343C?text=Hardware',
+    image: 'https://placehold.co/600x400.png',
+    hint: 'hardware tools',
     features: [
       'Quality Material Sourcing',
       'Cost-Effective Solutions',
@@ -76,6 +79,7 @@ const ServicesPage = () => {
                       alt={`${service.title} service image`}
                       layout="fill"
                       objectFit="cover"
+                      data-ai-hint={service.hint}
                     />
                   </div>
                   <div className="p-8">

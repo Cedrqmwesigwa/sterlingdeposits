@@ -11,37 +11,43 @@ const projects = [
   {
     title: 'Modern Villa in Kololo',
     description: 'A complete residential build from the ground up, featuring custom architectural designs and high-end finishes.',
-    image: 'https://placehold.co/600x400/31343C/FFF?text=Kololo+Villa',
+    image: 'https://placehold.co/600x400.png',
+    hint: 'modern villa',
     tags: ['Residential', 'New Build', 'Modern'],
   },
   {
     title: 'Nakasero Office Renovation',
     description: 'A comprehensive renovation of a commercial office space to create a modern, open-plan work environment.',
-    image: 'https://placehold.co/600x400/31343C/FFF?text=Nakasero+Office',
+    image: 'https://placehold.co/600x400.png',
+    hint: 'office interior',
     tags: ['Commercial', 'Renovation'],
   },
   {
     title: 'Kawempe Hardware Supply Depot',
     description: 'Construction of a new hardware supply center, focusing on durability and functional design.',
-    image: 'https://placehold.co/600x400/31343C/FFF?text=Kawempe+Depot',
+    image: 'https://placehold.co/600x400.png',
+    hint: 'industrial building',
     tags: ['Commercial', 'New Build', 'Industrial'],
   },
   {
     title: 'Bugolobi Apartment Complex',
     description: 'Exterior and interior finishing for a new apartment complex, including painting, tiling, and landscaping.',
-    image: 'https://placehold.co/600x400/31343C/FFF?text=Bugolobi+Apts',
+    image: 'https://placehold.co/600x400.png',
+    hint: 'apartment complex',
     tags: ['Residential', 'Finishing'],
   },
   {
     title: 'Entebbe Lakeside Retreat',
     description: 'A custom-built lakeside home with panoramic views, designed for comfort and relaxation.',
-    image: 'https://placehold.co/600x400/31343C/FFF?text=Entebbe+Retreat',
+    image: 'https://placehold.co/600x400.png',
+    hint: 'lakeside house',
     tags: ['Residential', 'New Build', 'Custom'],
   },
   {
     title: 'Acacia Mall Retail Unit',
     description: 'Remodeling of a retail unit to fit a new brand’s aesthetic, completed on a tight schedule.',
-    image: 'https://placehold.co/600x400/31343C/FFF?text=Acacia+Retail',
+    image: 'https://placehold.co/600x400.png',
+    hint: 'retail store',
     tags: ['Commercial', 'Renovation', 'Retail'],
   },
 ];
@@ -71,6 +77,7 @@ const ProjectsPage = () => {
                     alt={`Image of ${project.title}`}
                     layout="fill"
                     objectFit="cover"
+                    data-ai-hint={project.hint}
                   />
                 </div>
                 <CardHeader>

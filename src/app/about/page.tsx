@@ -33,10 +33,11 @@ const AboutPage = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-lg">
               <Image 
-                src="https://placehold.co/800x600/31343C/FFF?text=Our+Team" 
+                src="https://placehold.co/800x600.png" 
                 alt="Sterling Contractors team working"
                 layout="fill"
                 objectFit="cover"
+                data-ai-hint="team working"
               />
             </div>
             <div>
