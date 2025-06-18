@@ -178,7 +178,7 @@ export const blogPosts: BlogPost[] = [
       <p>While specific codes can be detailed, they generally cover aspects like site planning, foundation design, structural systems, electrical and plumbing installations, fire safety measures, and accessibility. It's advisable to work with professionals who are knowledgeable about the current National Building Code of Uganda.</p>
       <p class="mt-4">Sterling Contractors ensures all our projects are developed in strict accordance with local building codes and regulations, providing peace of mind to our clients.</p>
     `,
-    imageSrc: 'https://placehold.co/800x400.png',
+    imageSrc: 'https://images.unsplash.com/photo-1646153976497-14925728ff47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxCdWlsZGluZyUyMGNvZGVzfGVufDB8fHx8MTc1MDI1ODU4MXww&ixlib=rb-4.1.0&q=80&w=1080',
     imageAlt: 'Construction site with safety signs and a building inspector',
     imageHint: 'building codes',
     tags: ['Building Codes', 'Regulations', 'Compliance', 'Uganda', 'Safety', 'Construction Standards'],
