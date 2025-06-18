@@ -40,7 +40,7 @@ const TestimonialsPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-1 gap-8 mt-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-card p-6 rounded-lg shadow-md border border-border/30 flex flex-col sm:flex-row sm:items-start gap-6">
-                  <div className="relative w-full sm:w-1/3 h-48 sm:h-auto sm:aspect-square mb-4 sm:mb-0 overflow-hidden rounded-md shadow-inner">
+                  <div className="relative w-full sm:w-1/3 aspect-square mb-4 sm:mb-0 overflow-hidden rounded-md shadow-inner">
                     <Image
                       src={testimonial.imageSrc}
                       alt={`Visual representation for testimonial by ${testimonial.author}`}
