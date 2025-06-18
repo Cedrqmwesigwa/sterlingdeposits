@@ -11,7 +11,7 @@ const services = [
   {
     title: 'Residential Construction',
     description: 'From dream homes to custom builds, we lay the foundation for your future. Our team handles everything from design to the final touches, ensuring quality at every step.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://images.unsplash.com/photo-1601303981778-0f61e3d2da64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8UmVzaWRlbnRpYWwlMjBjb25zdHJ1Y3Rpb24lMjB8ZW58MHx8fHwxNzUwMjQ4MDk2fDA&ixlib=rb-4.1.0&q=80&w=1080',
     hint: 'new home',
     features: [
       'New Home Builds',
