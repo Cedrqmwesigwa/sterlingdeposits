@@ -69,7 +69,7 @@ export default function PaymentSecurity() {
                 className="object-contain"
               />
               <Image 
-                src="https://placehold.co/100x60.png" 
+                src="https://images.unsplash.com/photo-1639133694967-640f255f10fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYXN0ZXJjYXJkfGVufDB8fHx8MTc1MDI0NjUwMXww&ixlib=rb-4.1.0&q=80&w=1080" 
                 alt="Mobile Money Logo" 
                 width={100} 
                 height={60} 
