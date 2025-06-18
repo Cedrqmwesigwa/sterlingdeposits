@@ -132,7 +132,7 @@ export const blogPosts: BlogPost[] = [
       <p class="mt-4"><strong>Vertical Development:</strong> Optimizing land use through well-planned high-rise buildings and mixed-use developments.</p>
       <p class="mt-4">Sterling Contractors is keen to contribute to Kampala's positive urban transformation by embracing innovative and sustainable construction solutions.</p>
     `,
-    imageSrc: 'https://images.unsplash.com/photo-1560556852-3078b2334813?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxLYW1wYWxhJTIwY2l0eXxlbnwwfHx8fDE3NTAyNTY4OTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    imageSrc: 'https://images.unsplash.com/photo-1715673461914-3c86b821b75f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxNb2Rlcm4lMjBidWlsZGluZyUyMGthbXBhbGElMjB8ZW58MHx8fHwxNzUwMjU4MDI1fDA&ixlib=rb-4.1.0&q=80&w=1080',
     imageAlt: 'Aerial view of Kampala city with modern buildings and green spaces',
     imageHint: 'Kampala city',
     tags: ['Urban Planning', 'Kampala', 'Development', 'Infrastructure', 'Smart City'],
