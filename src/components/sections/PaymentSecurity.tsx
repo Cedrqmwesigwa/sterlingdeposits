@@ -61,7 +61,7 @@ export default function PaymentSecurity() {
                 className="object-contain"
               />
               <Image 
-                src="https://placehold.co/100x60.png" 
+                src="https://images.unsplash.com/photo-1603777953662-5310c93eeb1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8Y2FzaHxlbnwwfHx8fDE3NTAyNDY0NDB8MA&ixlib=rb-4.1.0&q=80&w=1080" 
                 alt="Mastercard Logo" 
                 width={100} 
                 height={60} 
