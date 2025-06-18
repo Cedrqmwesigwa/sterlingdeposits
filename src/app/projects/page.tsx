@@ -46,7 +46,7 @@ const projects = [
   {
     title: 'Acacia Mall Retail Unit',
     description: 'Remodeling of a retail unit to fit a new brand’s aesthetic, completed on a tight schedule.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://images.unsplash.com/photo-1734417511653-252ab0709e32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8cmVudGFsJTIwdW5pdHxlbnwwfHx8fDE3NTAyMzI0MDl8MA&ixlib=rb-4.1.0&q=80&w=1080',
     hint: 'retail store',
     tags: ['Commercial', 'Renovation', 'Retail'],
   },
