@@ -50,7 +50,7 @@ export default function ContactSection() {
                     <MapPin className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-medium text-foreground">Office Address</h4>
-                      <p className="text-muted-foreground">Plot 42, Industrial Area, Kampala, Uganda</p>
+                      <p className="text-muted-foreground">nakasero, entebbe rd, Uganda</p>
                       <a 
                         href={`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`} 
                         target="_blank" 
