@@ -1,6 +1,7 @@
 
 import { ShieldCheck, Lock, CreditCard } from 'lucide-react';
 import ScrollAnimate from '@/components/ScrollAnimate';
+import Image from 'next/image'; // Added import for Next.js Image component
 
 export default function PaymentSecurity() {
   const securityFeatures = [
@@ -46,9 +47,37 @@ export default function PaymentSecurity() {
           ))}
         </div>
          <ScrollAnimate delay="delay-300">
-          <p className="text-center text-muted-foreground mt-12 text-sm">
-            We partner with industry-leading payment gateways to ensure your deposits are handled securely and efficiently. Look for familiar logos during the payment process.
-          </p>
+          <div className="text-center mt-12">
+            <p className="text-muted-foreground text-sm">
+              We partner with industry-leading payment gateways to ensure your deposits are handled securely and efficiently. Look for familiar logos during the payment process.
+            </p>
+            <div className="flex justify-center items-center gap-6 mt-6">
+              <Image 
+                src="https://placehold.co/100x60.png" 
+                alt="Visa Logo" 
+                width={100} 
+                height={60} 
+                data-ai-hint="visa logo" 
+                className="object-contain"
+              />
+              <Image 
+                src="https://placehold.co/100x60.png" 
+                alt="Mastercard Logo" 
+                width={100} 
+                height={60} 
+                data-ai-hint="mastercard logo" 
+                className="object-contain"
+              />
+              <Image 
+                src="https://placehold.co/100x60.png" 
+                alt="Mobile Money Logo" 
+                width={100} 
+                height={60} 
+                data-ai-hint="mobile money" 
+                className="object-contain"
+              />
+            </div>
+          </div>
         </ScrollAnimate>
       </div>
     </section>
