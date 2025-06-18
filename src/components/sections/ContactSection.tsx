@@ -36,7 +36,7 @@ export default function ContactSection() {
                     <Phone className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-medium text-foreground">Phone</h4>
-                      <a href="tel:+256777123456" className="text-muted-foreground hover:text-primary transition-colors">+256 777 123456 (Kampala)</a>
+                      <a href="tel:+256751979777" className="text-muted-foreground hover:text-primary transition-colors">+256 751 979777</a>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -51,12 +51,12 @@ export default function ContactSection() {
                     <div>
                       <h4 className="font-medium text-foreground">WhatsApp</h4>
                       <a 
-                        href="https://wa.me/256777123456" 
+                        href="https://wa.me/256751979777" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        +256 777 123456
+                        +256 751 979777
                       </a>
                     </div>
                   </div>
