@@ -32,7 +32,7 @@ const projects = [
   {
     title: 'Bugolobi Apartment Complex',
     description: 'Exterior and interior finishing for a new apartment complex, including painting, tiling, and landscaping.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://images.unsplash.com/photo-1455587734955-081b22074882?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhcGFydG1lbnQlMjBjb21wbGV4fGVufDB8fHx8MTc1MDIzMjMyN3ww&ixlib=rb-4.1.0&q=80&w=1080',
     hint: 'apartment complex',
     tags: ['Residential', 'Finishing'],
   },
