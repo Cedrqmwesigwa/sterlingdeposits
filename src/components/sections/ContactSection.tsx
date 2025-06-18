@@ -50,10 +50,8 @@ export default function ContactSection() {
                     <MessageCircle className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-medium text-foreground">WhatsApp</h4>
-                      <a 
-                        href="https://wa.me/256751979777" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
+                      <a
+                        href="https://wa.me/256751979777"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
                         +256 751 979777
@@ -65,9 +63,9 @@ export default function ContactSection() {
                     <div>
                       <h4 className="font-medium text-foreground">Office Address</h4>
                       <p className="text-muted-foreground">Nakasero, Entebbe Rd, Uganda</p>
-                      <a 
-                        href={`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`} 
-                        target="_blank" 
+                      <a
+                        href={`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="text-sm text-primary hover:underline"
                       >
