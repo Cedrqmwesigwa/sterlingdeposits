@@ -10,8 +10,8 @@ const products: Product[] = [
     name: 'Cement (50kg Bag)',
     price: '32,000',
     unit: 'per bag',
-    imageSrc: 'https://images.unsplash.com/photo-1473230841016-ca42011196d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjZW1lbnQlMjBiYWd8ZW58MHx8fHwxNzUwMjI4NjM3fDA&ixlib=rb-4.1.0&q=80&w=1080',
-    imageHint: 'cement bag',
+    imageSrc: '/tororo cem 2.jpg',
+    imageHint: 'cement bags',
     icon: Layers,
   },
   {

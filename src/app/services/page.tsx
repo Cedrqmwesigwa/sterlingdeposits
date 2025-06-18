@@ -23,7 +23,7 @@ const services = [
   {
     title: 'Commercial Renovations',
     description: 'Modernize your business space to be more functional and appealing. We specialize in renovations that enhance your brand and improve customer experience.',
-    image: 'https://images.unsplash.com/photo-1675792832792-feac7216999a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxDb21tZXJjaWFsJTIwcmVub3ZhdGlvbiUyMHxlbnwwfHx8fDE3NTAyNDgxNDB8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1675792832792-feac7216999a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxDb2mmercial%20renovation%20office%20space%20interior%20design%20modern&w=1080&q=80&fit=max&ixlib=rb-4.1.0&auto=format&fm=jpg',
     hint: 'office renovation',
     features: [
       'Office & Retail Remodeling',
