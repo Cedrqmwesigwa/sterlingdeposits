@@ -11,14 +11,14 @@ const projects = [
   {
     title: 'Modern Villa in Kololo',
     description: 'A complete residential build from the ground up, featuring custom architectural designs and high-end finishes.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB2aWxsYXxlbnwwfHx8fDE3MjE3MjAwNTR8MA&ixlib=rb-4.0.3&q=80&w=1080',
     hint: 'modern villa',
     tags: ['Residential', 'New Build', 'Modern'],
   },
   {
     title: 'Nakasero Office Renovation',
     description: 'A comprehensive renovation of a commercial office space to create a modern, open-plan work environment.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://images.unsplash.com/photo-1573496774430-bb6269015d5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvZmZpY2UlMjBpbnRlcmlvcnxlbnwwfHx8fDE3MjE3MjAwNTV8MA&ixlib=rb-4.0.3&q=80&w=1080',
     hint: 'office interior',
     tags: ['Commercial', 'Renovation'],
   },
