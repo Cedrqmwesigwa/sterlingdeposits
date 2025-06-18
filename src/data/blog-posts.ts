@@ -132,7 +132,7 @@ export const blogPosts: BlogPost[] = [
       <p class="mt-4"><strong>Vertical Development:</strong> Optimizing land use through well-planned high-rise buildings and mixed-use developments.</p>
       <p class="mt-4">Sterling Contractors is keen to contribute to Kampala's positive urban transformation by embracing innovative and sustainable construction solutions.</p>
     `,
-    imageSrc: 'https://placehold.co/800x400.png',
+    imageSrc: 'https://images.unsplash.com/photo-1560556852-3078b2334813?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxLYW1wYWxhJTIwY2l0eXxlbnwwfHx8fDE3NTAyNTY4OTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
     imageAlt: 'Aerial view of Kampala city with modern buildings and green spaces',
     imageHint: 'Kampala city',
     tags: ['Urban Planning', 'Kampala', 'Development', 'Infrastructure', 'Smart City'],
@@ -156,7 +156,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
       <p>Proactive maintenance not only preserves the value of your property but also ensures a safe and comfortable living environment. Sterling Contractors can also offer post-construction maintenance advice specific to your project.</p>
     `,
-    imageSrc: 'https://placehold.co/800x400.png',
+    imageSrc: 'https://images.unsplash.com/photo-1676311396794-f14881e9daaa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxIb21lJTIwbWFpbnRlbmFuY2UlMjB8ZW58MHx8fHwxNzUwMjU2OTUzfDA&ixlib=rb-4.1.0&q=80&w=1080',
     imageAlt: 'Person performing home maintenance task like cleaning gutters',
     imageHint: 'home maintenance',
     tags: ['Home Maintenance', 'Property Care', 'Uganda', 'Tips', 'Homeownership'],
@@ -188,3 +188,4 @@ export const blogPosts: BlogPost[] = [
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((post) => post.slug === slug);
 }
+
