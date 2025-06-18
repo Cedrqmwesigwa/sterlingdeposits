@@ -18,7 +18,7 @@ const projects = [
   {
     title: 'Nakasero Office Renovation',
     description: 'A comprehensive renovation of a commercial office space to create a modern, open-plan work environment.',
-    image: 'https://images.unsplash.com/photo-1573496774430-bb6269015d5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvZmZpY2UlMjBpbnRlcmlvcnxlbnwwfHx8fDE3MjE3MjAwNTV8MA&ixlib=rb-4.0.3&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1646592491560-e121e097dcf2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxPZmZpY2UlMjByZW5vdmF0aW9uJTIwfGVufDB8fHx8MTc1MDI0NzcyMnww&ixlib=rb-4.1.0&q=80&w=1080',
     hint: 'office interior',
     tags: ['Commercial', 'Renovation'],
   },
