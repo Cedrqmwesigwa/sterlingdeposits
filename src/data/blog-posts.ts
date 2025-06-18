@@ -85,7 +85,7 @@ export const blogPosts: BlogPost[] = [
       <p class="mt-4"><strong>Waste Reduction and Recycling:</strong> Minimizing construction waste through careful planning and recycling materials on-site contributes to a cleaner environment.</p>
       <p class="mt-4">Sterling Contractors is dedicated to integrating these sustainable practices into our projects, helping build a greener future for Uganda, one structure at a time.</p>
     `,
-    imageSrc: 'https://placehold.co/800x400.png',
+    imageSrc: 'https://images.unsplash.com/photo-1569227997603-33b9f12af927?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxTdXN0YWluYWJsZSUyMGJ1aWxkaW5nJTIwfGVufDB8fHx8MTc1MDI1Njg3NHww&ixlib=rb-4.1.0&q=80&w=1080',
     imageAlt: 'Eco-friendly building materials in a natural setting',
     imageHint: 'green building',
     tags: ['Sustainability', 'Eco-Friendly', 'Green Building', 'Uganda', 'Construction Methods'],
