@@ -25,7 +25,7 @@ const projects = [
   {
     title: 'Kawempe Hardware Supply Depot',
     description: 'Construction of a new hardware supply center, focusing on durability and functional design.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://images.unsplash.com/photo-1633422279841-8cd2f399e546?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxIYXJkd2FyZSUyMGRlcG90fGVufDB8fHx8MTc1MDI0Nzc0Nnww&ixlib=rb-4.1.0&q=80&w=1080',
     hint: 'industrial building',
     tags: ['Commercial', 'New Build', 'Industrial'],
   },
