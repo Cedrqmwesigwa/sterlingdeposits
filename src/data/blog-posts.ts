@@ -65,7 +65,7 @@ export const blogPosts: BlogPost[] = [
       </ol>
       <p class="mt-4">Sterling Contractors is committed to staying at the forefront of these trends, incorporating innovative solutions and sustainable practices into our projects to build a better future for Kampala.</p>
     `,
-    imageSrc: 'https://placehold.co/800x400.png',
+    imageSrc: 'https://images.unsplash.com/photo-1658119050403-b6b1600e86fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxDb25zdHJ1Y3Rpb24lMjB0cmVuZHN8ZW58MHx8fHwxNzUwMjQ4ODQxfDA&ixlib=rb-4.1.0&q=80&w=1080',
     imageAlt: 'Modern building in Kampala skyline',
     imageHint: 'city skyline',
     tags: ['Trends', 'Kampala', 'Construction', 'Sustainability', 'Technology'],
