@@ -6,8 +6,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, CalendarDays, UserCircle } from 'lucide-react';
+import { ArrowLeft, CalendarDays, UserCircle, Lightbulb } from 'lucide-react';
 import type { Metadata, ResolvingMetadata } from 'next';
+import { recommendRelatedPosts } from '@/ai/flows/recommend-related-posts-flow';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 type Props = {
   params: { slug: string };
@@ -34,14 +36,14 @@ export async function generateMetadata(
         description: post.summary,
         images: [
             {
-                url: post.imageSrc, // Replace with actual image URL if dynamic
+                url: post.imageSrc,
                 width: 800,
                 height: 400,
                 alt: post.imageAlt,
             },
         ],
         type: 'article',
-        publishedTime: new Date(post.date).toISOString(), // Ensure date is in ISO format
+        publishedTime: new Date(post.date).toISOString(),
         authors: [post.author],
         tags: post.tags,
     }
@@ -54,12 +56,37 @@ export async function generateStaticParams() {
   }));
 }
 
-const BlogPostPage = ({ params }: Props) => {
+const BlogPostPage = async ({ params }: Props) => {
   const post = getBlogPostBySlug(params.slug);
 
   if (!post) {
     notFound();
   }
+
+  let recommendedPosts: { title: string; slug: string | undefined }[] = [];
+  try {
+    const allOtherPostTitles = blogPosts
+      .filter(p => p.slug !== post.slug)
+      .map(p => p.title);
+
+    if (allOtherPostTitles.length > 0) {
+      const recommendationResult = await recommendRelatedPosts({
+        currentPostTitle: post.title,
+        allPostTitles: allOtherPostTitles,
+        count: 3
+      });
+      recommendedPosts = recommendationResult.recommendedTitles
+        .map(title => {
+          const foundPost = blogPosts.find(p => p.title === title);
+          return foundPost ? { title: foundPost.title, slug: foundPost.slug } : null;
+        })
+        .filter(p => p !== null) as { title: string; slug: string }[];
+    }
+  } catch (error) {
+    console.error("Failed to get recommendations:", error);
+    // Gracefully handle error, e.g. by showing no recommendations
+  }
+
 
   return (
     <MainLayout>
@@ -93,7 +120,7 @@ const BlogPostPage = ({ params }: Props) => {
           />
         </div>
 
-        <div 
+        <div
           className="prose prose-lg dark:prose-invert max-w-none space-y-6"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
@@ -107,6 +134,44 @@ const BlogPostPage = ({ params }: Props) => {
               ))}
             </div>
           </div>
+        )}
+
+        {recommendedPosts.length > 0 && (
+          <section className="mt-16 pt-8 border-t border-border">
+            <h2 className="text-2xl font-bold tracking-tight mb-6 flex items-center">
+              <Lightbulb className="mr-3 h-6 w-6 text-primary" />
+              You Might Also Like
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {recommendedPosts.map(recPost => {
+                const fullRecPost = blogPosts.find(p => p.slug === recPost.slug);
+                if (!fullRecPost) return null;
+                return (
+                  <Card key={recPost.slug} className="overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                     <Link href={`/blog/${fullRecPost.slug}`} className="block">
+                        <div className="relative h-40 w-full">
+                        <Image
+                            src={fullRecPost.imageSrc}
+                            alt={fullRecPost.imageAlt}
+                            layout="fill"
+                            objectFit="cover"
+                            data-ai-hint={fullRecPost.imageHint}
+                        />
+                        </div>
+                    </Link>
+                    <CardHeader>
+                      <Link href={`/blog/${fullRecPost.slug}`} className="block">
+                        <CardTitle className="text-lg hover:text-primary transition-colors">{fullRecPost.title}</CardTitle>
+                      </Link>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-sm text-muted-foreground line-clamp-3">{fullRecPost.summary}</p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </section>
         )}
       </article>
     </MainLayout>
