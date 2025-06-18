@@ -35,7 +35,7 @@ const services = [
   {
     title: 'Hardware Supply & Consultation',
     description: 'Gain access to top-quality hardware and expert advice. We source and supply the best materials to ensure your project’s success and longevity.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://images.unsplash.com/photo-1617123623686-2b7b339785da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxIYXJkd2FyZSUyMHN1cHBseSUyMHxlbnwwfHx8fDE3NTAyNTY2OTh8MA&ixlib=rb-4.1.0&q=80&w=1080',
     hint: 'hardware tools',
     features: [
       'Quality Material Sourcing',
