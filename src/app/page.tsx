@@ -55,9 +55,9 @@ export default function Home() {
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { id: 1, title: "Roofing Project", src: "/ironsheets red.jpg", altText: 'Image of red iron sheets used in a roofing project' },
-              { id: 2, title: "Cement Supply", src: "/tororo cem 2.jpg", altText: 'Image of bags of Tororo cement' },
-              { id: 3, title: "Residential Build", src: "https://images.unsplash.com/photo-1494526585095-c41746248156?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyZXNpZGVudGlhbCUyMHxlbnwwfHx8fDE3NTAxODU5ODd8MA&ixlib=rb-4.1.0&q=80&w=1080", hint: 'residential construction house', altText: 'Image of a residential house construction' }
+              { id: 1, title: "Residential Build in Bukasa", src: "https://images.unsplash.com/photo-1494526585095-c41746248156?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyZXNpZGVudGlhbCUyMHxlbnwwfHx8fDE3NTAxODU5ODd8MA&ixlib=rb-4.1.0&q=80&w=1080", hint: 'residential construction house', altText: 'Image of Residential Build in Bukasa' },
+              { id: 2, title: "Warehouse in Bwaise", src: "https://images.unsplash.com/photo-1601598852806-524f0060508e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyMHx8d2FyZWhvdXNlfGVufDB8fHx8MTc1MDE4NjA2Mnww&ixlib=rb-4.1.0&q=80&w=1080", hint: 'interior design', altText: 'Image of Warehouse in Bwaise' },
+              { id: 3, title: "Pearl of Africa Hotel", src: "https://images.unsplash.com/photo-1580741276595-92d7e435d1f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29tbWVyY2lhbCUyMGJ1aWxkaW5nfGVufDB8fHx8MTc1MDE4NjEyM3ww&ixlib=rb-4.1.0&q=80&w=1080", hint: 'construction site', altText: 'Image of Pearl of Africa Hotel' }
             ].map((item) => (
               <Card key={item.id}>
                 <Image
