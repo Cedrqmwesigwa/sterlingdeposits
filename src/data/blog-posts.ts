@@ -43,7 +43,7 @@ export const blogPosts: BlogPost[] = [
       <p>We provide a clear breakdown of how your deposit will be utilized. Our contracts outline payment schedules and milestones, ensuring you are informed every step of the way. We prioritize secure handling of funds and transparent accounting.</p>
       <p class="mt-4">We encourage open communication. If you have any questions about your deposit or project finances, our team is always available to provide clarification and assurance.</p>
     `,
-    imageSrc: 'https://placehold.co/800x400.png',
+    imageSrc: 'https://images.unsplash.com/photo-1707872387128-7ddce34bfd86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxQcm9qZWN0JTIwZGVwb3NpdCUyMHxlbnwwfHx8fDE3NTAyNDg0ODN8MA&ixlib=rb-4.1.0&q=80&w=1080',
     imageAlt: 'Client and contractor discussing project plans',
     imageHint: 'meeting discussion',
     tags: ['Deposits', 'Client Guide', 'Finance', 'Transparency'],
