@@ -39,7 +39,7 @@ const projects = [
   {
     title: 'Entebbe Lakeside Retreat',
     description: 'A custom-built lakeside home with panoramic views, designed for comfort and relaxation.',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://images.unsplash.com/photo-1622315173972-2bee16732128?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsYWtlc2lkZSUyMGhvdXNlfGVufDB8fHx8MTc1MDIzMjM2NXww&ixlib=rb-4.1.0&q=80&w=1080',
     hint: 'lakeside house',
     tags: ['Residential', 'New Build', 'Custom'],
   },
