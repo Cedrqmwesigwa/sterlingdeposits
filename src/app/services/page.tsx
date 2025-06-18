@@ -23,7 +23,7 @@ const services = [
   {
     title: 'Commercial Renovations',
     description: 'Modernize your business space to be more functional and appealing. We specialize in renovations that enhance your brand and improve customer experience.',
-    image: 'https://images.unsplash.com/photo-1675792832792-feac7216999a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxDb2mmercial%20renovation%20office%20space%20interior%20design%20modern&w=1080&q=80&fit=max&ixlib=rb-4.1.0&auto=format&fm=jpg',
+    image: 'https://images.unsplash.com/photo-1675792832792-feac7216999a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxDb21tZXJjaWFsJTIwcmVub3ZhdGlvbiUyMG9mZmljZSUyMHNwYWNlJTIwaW50ZXJpb3IlMjBkZXNpZ24lMjBtb2Rlcm4mdz0xMDgwJnE9ODAmZml0PW1heCZpeGxpYj1yYi00LjEuMCZhdXRvPWZvcm1hdCZmbT1qcGc',
     hint: 'office renovation',
     features: [
       'Office & Retail Remodeling',
@@ -69,10 +69,10 @@ const ServicesPage = () => {
       {/* Services Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-12">
+          <div className="grid grid-cols-1 gap-12">
             {services.map((service, index) => (
               <Card key={service.title} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className={`grid md:grid-cols-2 items-center`}>
+                <div className={`grid grid-cols-1 md:grid-cols-2 items-center`}>
                   <div className={`relative h-64 md:h-full ${index % 2 === 1 ? 'md:order-last' : ''}`}>
                     <Image
                       src={service.image}

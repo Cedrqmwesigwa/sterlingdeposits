@@ -31,7 +31,7 @@ const BlogPage = () => {
           {blogPosts.length === 0 ? (
             <p className="text-center text-muted-foreground text-lg">No blog posts available yet. Check back soon!</p>
           ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post) => (
                 <Card key={post.slug} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <Link href={`/blog/${post.slug}`} className="block">

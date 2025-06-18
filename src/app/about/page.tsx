@@ -30,10 +30,10 @@ const AboutPage = () => {
       {/* Our Story Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-lg">
-              <Image 
-                src="https://images.unsplash.com/photo-1580741753044-b3f303ad361b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb21tZXJjaWFsJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzUwMTg2MTIzfDA&ixlib=rb-4.1.0&q=80&w=1080" 
+              <Image
+                src="https://images.unsplash.com/photo-1580741753044-b3f303ad361b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb21tZXJjaWFsJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzUwMTg2MTIzfDA&ixlib=rb-4.1.0&q=80&w=1080"
                 alt="Sterling Contractors team working"
                 layout="fill"
                 objectFit="cover"
@@ -57,7 +57,7 @@ const AboutPage = () => {
       <section className="py-16 bg-muted/40">
         <div className="container mx-auto px-4">
             <SectionTitle title="Our Core Principles" description="These principles guide every project we undertake."/>
-            <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <Card>
                     <CardHeader>
                         <div className="mx-auto bg-primary/10 p-3 rounded-full w-fit">

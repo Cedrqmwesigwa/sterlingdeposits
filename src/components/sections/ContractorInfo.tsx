@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { BadgeCheck } from 'lucide-react';
 import ScrollAnimate from '@/components/ScrollAnimate';
@@ -7,7 +8,7 @@ export default function ContractorInfo() {
   return (
     <section id="about" className="py-16 lg:py-24 bg-card">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <ScrollAnimate>
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
               <Image

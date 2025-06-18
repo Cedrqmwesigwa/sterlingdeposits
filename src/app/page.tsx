@@ -53,7 +53,7 @@ export default function Home() {
             title="Our Recent Work"
             description="We take pride in our work. Here are a few of our recently completed projects."
           />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { id: 1, title: "Residential Build in Bukasa", src: "https://images.unsplash.com/photo-1494526585095-c41746248156?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyZXNpZGVudGlhbCUyMHxlbnwwfHx8fDE3NTAxODU5ODd8MA&ixlib=rb-4.1.0&q=80&w=1080", hint: 'residential construction house', altText: 'Image of Residential Build in Bukasa' },
               { id: 2, title: "Warehouse in Bwaise", src: "https://images.unsplash.com/photo-1601598852806-524f0060508e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyMHx8d2FyZWhvdXNlfGVufDB8fHx8MTc1MDE4NjA2Mnww&ixlib=rb-4.1.0&q=80&w=1080", hint: 'interior design', altText: 'Image of Warehouse in Bwaise' },
@@ -63,8 +63,8 @@ export default function Home() {
                 <Image
                   src={item.src}
                   alt={item.altText}
-                  width={400} 
-                  height={300} 
+                  width={400}
+                  height={300}
                   layout="responsive"
                   objectFit="cover"
                   className="relative h-60 w-full rounded-t-lg"

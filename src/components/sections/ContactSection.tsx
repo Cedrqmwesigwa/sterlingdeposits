@@ -21,7 +21,7 @@ export default function ContactSection() {
           </p>
         </ScrollAnimate>
 
-        <div className="grid lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           <div className="lg:col-span-3">
             <ScrollAnimate delay="delay-150">
               <ContactForm />
