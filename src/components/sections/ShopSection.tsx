@@ -10,7 +10,7 @@ const products: Product[] = [
     name: 'Cement (50kg Bag)',
     price: '42,000',
     unit: 'per bag',
-    imageSrc: 'https://placehold.co/400x300.png',
+    imageSrc: 'https://images.unsplash.com/photo-1473230841016-ca42011196d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjZW1lbnQlMjBiYWd8ZW58MHx8fHwxNzUwMjI4NjM3fDA&ixlib=rb-4.1.0&q=80&w=1080',
     imageHint: 'cement bag',
     icon: Layers,
   },
@@ -19,7 +19,7 @@ const products: Product[] = [
     name: 'Iron Sheets (Gauge 30g)',
     price: '42,000',
     unit: 'per piece',
-    imageSrc: 'https://placehold.co/400x300.png',
+    imageSrc: 'https://images.unsplash.com/photo-1672052088902-57fcde28ad8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxyb29maW5nJTIwc2hlZXRzfGVufDB8fHx8MTc1MDIyODYzN3ww&ixlib=rb-4.1.0&q=80&w=1080',
     imageHint: 'roofing sheets',
     icon: LayoutGrid,
   },
@@ -49,3 +49,4 @@ export default function ShopSection() {
     </section>
   );
 }
+
