@@ -109,7 +109,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
       <p>At Sterling Contractors, we welcome these questions and are committed to transparency. A trustworthy contractor will be open to discussing these points to build your confidence.</p>
     `,
-    imageSrc: 'https://placehold.co/800x400.png',
+    imageSrc: 'https://images.unsplash.com/photo-1663058480259-2213d39f4f90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxSaWdodCUyMGNvbnRyYWN0b3JzfGVufDB8fHx8MTc1MDI1NzEwOHww&ixlib=rb-4.1.0&q=80&w=1080',
     imageAlt: 'Client meeting with a construction contractor over blueprints',
     imageHint: 'client meeting',
     tags: ['Contractor', 'Hiring', 'Client Guide', 'Due Diligence', 'Uganda'],
