@@ -22,7 +22,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
       <p>At Sterling Contractors, we prioritize the use of certified, high-grade hardware in all our projects and supply channels. We believe that a strong foundation, both literally and figuratively, is built on quality components. By choosing wisely, developers and homeowners can ensure their investments are sound, safe, and sustainable.</p>
     `,
-    imageSrc: 'https://placehold.co/800x400.png',
+    imageSrc: 'https://images.unsplash.com/photo-1489514354504-1653aa90e34e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8QmVzdCUyMGNvbnN0cnVjdGlvbiUyMG1hdGVyaWFscyUyMHxlbnwwfHx8fDE3NTAyNDg0MzF8MA&ixlib=rb-4.1.0&q=80&w=1080',
     imageAlt: 'Assortment of quality construction hardware',
     imageHint: 'hardware tools',
     tags: ['Quality', 'Hardware', 'Construction', 'Uganda'],
