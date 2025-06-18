@@ -1,7 +1,7 @@
 
 import { ContactForm } from '@/components/ContactForm';
 import ScrollAnimate from '@/components/ScrollAnimate';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 
 export default function ContactSection() {
   const latitude = 0.310014;
@@ -47,10 +47,24 @@ export default function ContactSection() {
                     </div>
                   </div>
                   <div className="flex items-start">
+                    <MessageCircle className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-medium text-foreground">WhatsApp</h4>
+                      <a 
+                        href="https://wa.me/256777123456" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        +256 777 123456
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
                     <MapPin className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-medium text-foreground">Office Address</h4>
-                      <p className="text-muted-foreground">nakasero, entebbe rd, Uganda</p>
+                      <p className="text-muted-foreground">Nakasero, Entebbe Rd, Uganda</p>
                       <a 
                         href={`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`} 
                         target="_blank" 
