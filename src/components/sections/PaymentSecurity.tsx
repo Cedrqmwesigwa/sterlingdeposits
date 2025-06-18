@@ -53,7 +53,7 @@ export default function PaymentSecurity() {
             </p>
             <div className="flex justify-center items-center gap-6 mt-6">
               <Image 
-                src="https://placehold.co/100x60.png" 
+                src="https://images.unsplash.com/photo-1684679674829-fc7b436ec8e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8YmFuayUyMGljb258ZW58MHx8fHwxNzUwMjQ2NDIwfDA&ixlib=rb-4.1.0&q=80&w=1080" 
                 alt="Visa Logo" 
                 width={100} 
                 height={60} 
