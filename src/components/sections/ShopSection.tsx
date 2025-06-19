@@ -2,7 +2,7 @@
 import { ProductCard } from '@/components/ui/ProductCard';
 import type { Product } from '@/types';
 import ScrollAnimate from '@/components/ScrollAnimate';
-import { Layers, LayoutGrid } from 'lucide-react';
+import { Layers, LayoutGrid, Power, Droplets, DoorOpen } from 'lucide-react';
 
 const products: Product[] = [
   {
@@ -23,7 +23,33 @@ const products: Product[] = [
     imageHint: 'roofing sheets',
     icon: LayoutGrid,
   },
-  // Add more products here
+  {
+    id: 'solar-pump-1500w',
+    name: 'Solar Pump (1500W)',
+    price: '1,890,000',
+    unit: 'per unit',
+    imageSrc: '/solar-pump.jpg',
+    imageHint: 'solar water pump',
+    icon: Power,
+  },
+  {
+    id: 'pvc-gutters',
+    name: 'PVC Rain Gutters',
+    price: '25,000',
+    unit: 'per meter',
+    imageSrc: 'https://placehold.co/400x300.png',
+    imageHint: 'rain gutters',
+    icon: Droplets,
+  },
+  {
+    id: 'aluminium-door-std',
+    name: 'Aluminium Door (Standard)',
+    price: '350,000',
+    unit: 'per door',
+    imageSrc: '/aluminium-door.jpg',
+    imageHint: 'aluminium door',
+    icon: DoorOpen,
+  },
 ];
 
 export default function ShopSection() {
@@ -49,4 +75,3 @@ export default function ShopSection() {
     </section>
   );
 }
-
